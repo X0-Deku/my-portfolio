@@ -1,32 +1,44 @@
 import { motion } from "framer-motion";
-import { FlaskConical, Trophy } from "lucide-react";
+import { FlaskConical, Trophy, Target, Shield, Crosshair } from "lucide-react";
 
 const platforms = [
   {
     name: "PortSwigger Web Security Academy",
     icon: FlaskConical,
-    description: "Regularly completing advanced labs covering the full spectrum of web application vulnerabilities — from SQL injection and XSS to advanced topics like deserialization, SSRF, and HTTP request smuggling.",
-    focus: ["SQL Injection", "Cross-Site Scripting", "Authentication Flaws", "Access Control", "SSRF", "JWT", "CSRF", "File upload", "Path traversal", "Information disclosure"],
+    description: "Regularly completing advanced labs covering the full spectrum of web application vulnerabilities — from SQL injection and XSS to SSRF and request smuggling.",
+    focus: ["SQL Injection", "Cross-Site Scripting", "Authentication Flaws", "Access Control", "SSRF", "CSRF", "Path Traversal"],
   },
   {
-    name: "TryHackMe",
+    name: "Capture The Flag Challenges",
     icon: Trophy,
-    description: "Progressing through structured learning paths and challenge rooms focused on penetration testing, privilege escalation, and CTF-style problem solving.",
-    focus: ["Linux Privilege Escalation", "Web Exploitation", "Network Security", "CTF Challenges", "OWASP Top 10"],
+    description: "Participating in CTF competitions to sharpen problem-solving skills and learn new exploitation techniques in a competitive environment.",
+    focus: ["Web Exploitation", "Cryptography", "Forensics", "Reverse Engineering"],
+  },
+  {
+    name: "Practical Exploitation Labs",
+    icon: Target,
+    description: "Hands-on practice with real-world exploitation scenarios including privilege escalation, lateral movement, and post-exploitation techniques.",
+    focus: ["Linux Privilege Escalation", "Network Pivoting", "Enumeration", "Post-Exploitation"],
+  },
+  {
+    name: "Red Team Practice Scenarios",
+    icon: Crosshair,
+    description: "Simulating full offensive security engagements from initial recon through exploitation to reporting, building real-world red team skills.",
+    focus: ["Reconnaissance", "Social Engineering", "Evasion", "Reporting"],
   },
 ];
 
 const LabsSection = () => {
   return (
-    <section id="labs" className="py-24">
-      <div className="container mx-auto px-6 max-w-4xl">
+    <section id="labs" className="py-24 bg-secondary/30">
+      <div className="container mx-auto px-6 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-mono font-bold mb-2 text-primary text-glow-sm">
-            <span className="text-muted-foreground">05.</span> Labs & Training
+            <span className="text-muted-foreground">05.</span> Labs & Security Challenges
           </h2>
           <div className="w-20 h-0.5 bg-primary/40 mb-10" />
         </motion.div>

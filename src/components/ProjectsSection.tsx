@@ -1,35 +1,30 @@
 import { motion } from "framer-motion";
-import { Crosshair, Globe, Shield, Bug } from "lucide-react";
+import { Crosshair, Globe, Shield, Search, Github } from "lucide-react";
 
 const projects = [
   {
+    icon: Shield,
+    title: "Web Application Security Testing Lab",
+    description: "A comprehensive testing environment for practicing web application vulnerability assessment, covering OWASP Top 10 vulnerabilities with hands-on exploitation scenarios.",
+    skills: ["Burp Suite", "OWASP", "Python", "SQL Injection", "XSS"],
+  },
+  {
     icon: Crosshair,
-    title: "Red Team Operation Simulation",
-    subtitle: "Full Offensive Security Engagement",
-    description: "A comprehensive academic project simulating a complete red team engagement, from initial reconnaissance through exploitation to final reporting.",
-    details: [
-      { label: "Reconnaissance", text: "Passive and active information gathering, OSINT, target profiling, and attack surface mapping." },
-      { label: "Vulnerability Discovery", text: "Manual and automated scanning to identify misconfigurations, outdated software, and exploitable entry points." },
-      { label: "Exploitation", text: "Leveraged discovered vulnerabilities to gain initial access, including web application exploits and credential attacks." },
-      { label: "Malware & Virus Testing", text: "Analyzed and tested malicious payloads in controlled environments to understand evasion techniques." },
-      { label: "Malicious File Analysis", text: "Inspected suspicious files and links using static and dynamic analysis methods." },
-      { label: "Defensive Bypass", text: "Tested techniques to evade detection mechanisms including AV solutions and basic IDS rules." },
-      { label: "Reporting", text: "Produced detailed engagement documentation with findings, risk ratings, and remediation recommendations." },
-    ],
-    skills: ["Metasploit", "Nmap", "Burp Suite", "Social Engineering", "Report Writing"],
+    title: "Network Scanning Toolkit",
+    description: "Custom network reconnaissance toolkit automating host discovery, port scanning, and service enumeration for penetration testing engagements.",
+    skills: ["Python", "Nmap", "TCP/IP", "Bash", "Network Security"],
+  },
+  {
+    icon: Search,
+    title: "Vulnerability Assessment Framework",
+    description: "A modular framework for conducting structured vulnerability assessments, integrating multiple scanning tools and generating consolidated reports.",
+    skills: ["Python", "Nmap", "Nikto", "Automation", "Reporting"],
   },
   {
     icon: Globe,
-    title: "Web Crawler Recon Tool",
-    subtitle: "Custom Security Reconnaissance Tool",
-    description: "A purpose-built web crawler designed to support the reconnaissance phase of penetration testing engagements.",
-    details: [
-      { label: "Purpose", text: "Automates the discovery of endpoints, hidden paths, and link structures within target web applications." },
-      { label: "Features", text: "Link extraction, directory mapping, endpoint enumeration, and response analysis." },
-      { label: "Technologies", text: "Built with Python, leveraging requests and BeautifulSoup for HTTP interaction and HTML parsing." },
-      { label: "Applications", text: "Used in pre-engagement recon to map attack surfaces and identify potential entry points for further testing." },
-    ],
-    skills: ["Python", "Web Scraping", "Reconnaissance", "HTTP Protocol"],
+    title: "Custom Web Crawler for Security Recon",
+    description: "Purpose-built web crawler designed to support reconnaissance in penetration testing — automating endpoint discovery, link extraction, and attack surface mapping.",
+    skills: ["Python", "BeautifulSoup", "HTTP Protocol", "Reconnaissance"],
   },
 ];
 
@@ -48,42 +43,37 @@ const ProjectsSection = () => {
           <div className="w-20 h-0.5 bg-primary/40 mb-10" />
         </motion.div>
 
-        <div className="space-y-10">
+        <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-              className="p-8 rounded-lg border border-border bg-card card-glow"
+              transition={{ delay: i * 0.1 }}
+              className="p-6 rounded-lg border border-border bg-card card-glow flex flex-col"
             >
-              <div className="flex items-start gap-4 mb-4">
-                <project.icon className="w-8 h-8 text-primary shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
-                  <p className="font-mono text-sm text-primary">{project.subtitle}</p>
-                </div>
+              <div className="flex items-start gap-3 mb-3">
+                <project.icon className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                <h3 className="text-lg font-bold text-foreground">{project.title}</h3>
               </div>
-
-              <p className="text-secondary-foreground mb-6">{project.description}</p>
-
-              <div className="space-y-3 mb-6">
-                {project.details.map((d) => (
-                  <div key={d.label} className="flex gap-3">
-                    <span className="text-primary font-mono text-sm font-semibold shrink-0 w-40">{d.label}:</span>
-                    <span className="text-sm text-muted-foreground">{d.text}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-wrap gap-2">
+              <p className="text-sm text-secondary-foreground mb-4 flex-1">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
                 {project.skills.map((s) => (
-                  <span key={s} className="px-3 py-1 text-xs font-mono rounded bg-primary/10 text-primary border border-primary/20">
+                  <span key={s} className="px-2 py-0.5 text-xs font-mono rounded bg-primary/10 text-primary border border-primary/20">
                     {s}
                   </span>
                 ))}
               </div>
+              <a
+                href="https://github.com/X0-Deku"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-mono text-primary hover:text-foreground transition-colors self-start"
+              >
+                <Github className="w-4 h-4" />
+                View on GitHub
+              </a>
             </motion.div>
           ))}
         </div>
