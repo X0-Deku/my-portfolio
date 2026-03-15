@@ -34,7 +34,7 @@ const OnlinePresenceSection = () => {
               href="https://github.com/X0-Deku"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary font-mono text-sm hover:text-glow-sm transition-all"
+              className="inline-flex items-center gap-2 text-primary font-mono text-sm hover:text-foreground transition-colors"
             >
               github.com/X0-Deku →
             </a>
@@ -54,12 +54,12 @@ const OnlinePresenceSection = () => {
               Professional profile optimized for recruiters — showcasing internships, certifications, technical skills, and career trajectory in offensive security. Open to international opportunities.
             </p>
             <a
-              href="https://linkedin.com/in/abdelrahman-sayed"
+              href="https://www.linkedin.com/in/abdelrahman-sayed-2486ba306/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-primary font-mono text-sm hover:text-glow-sm transition-all"
+              className="inline-flex items-center gap-2 text-primary font-mono text-sm hover:text-foreground transition-colors"
             >
-              linkedin.com/in/abdelrahman-sayed →
+              LinkedIn Profile →
             </a>
           </motion.div>
         </div>

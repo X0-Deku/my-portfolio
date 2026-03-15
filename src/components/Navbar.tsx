@@ -7,6 +7,7 @@ const links = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Labs", href: "#labs" },
+  { label: "Writeups", href: "#writeups" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -21,7 +22,6 @@ const Navbar = () => {
           Abdelrahman Sayed
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -30,13 +30,11 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile toggle */}
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
           <div className="container mx-auto px-6 py-4 flex flex-col gap-3">

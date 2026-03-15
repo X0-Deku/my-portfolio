@@ -2,28 +2,20 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Web Application Security",
-    skills: ["SQL Injection", "XSS (Stored/Reflected/DOM)", "CSRF", "SSRF", "IDOR", "Authentication Bypass", "Business Logic Flaws", "File Upload Vulnerabilities"],
-  },
-  {
-    title: "Networking & Protocols",
-    skills: ["TCP/IP", "DNS", "HTTP/HTTPS", "ARP", "Network Scanning", "Traffic Analysis", "Man-in-the-Middle Concepts"],
-  },
-  {
-    title: "Linux & Systems",
-    skills: ["Kali Linux", "Bash Scripting", "File System Navigation", "Service Enumeration", "Privilege Escalation Concepts", "Process Management"],
+    title: "Cybersecurity Skills",
+    skills: ["Penetration Testing", "Web Application Security", "Vulnerability Assessment", "Network Security", "Exploitation Fundamentals", "Information Security Principles"],
   },
   {
     title: "Programming",
-    skills: ["Python", "C++", "JavaScript", "HTML/CSS", "SQL", "Scripting for Automation"],
+    skills: ["Python", "C++", "JavaScript", "SQL"],
+  },
+  {
+    title: "Systems & Networking",
+    skills: ["Linux", "TCP/IP Networking", "System Administration Basics"],
   },
   {
     title: "Security Tools",
-    skills: ["Burp Suite", "Nmap", "Wireshark", "Metasploit", "Dirb/Gobuster", "Nikto", "SQLMap", "John the Ripper"],
-  },
-  {
-    title: "Penetration Testing Methodologies",
-    skills: ["OWASP Top 10", "Reconnaissance", "Vulnerability Assessment", "Exploitation", "Post-Exploitation", "Reporting & Documentation"],
+    skills: ["Burp Suite", "Nmap", "Wireshark", "Metasploit", "Gobuster", "Nikto", "Git"],
   },
 ];
 
@@ -42,7 +34,7 @@ const SkillsSection = () => {
           <div className="w-20 h-0.5 bg-primary/40 mb-10" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.title}
