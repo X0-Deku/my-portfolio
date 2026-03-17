@@ -51,10 +51,10 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-lg border border-border bg-card card-glow flex flex-col"
+              className="p-6 rounded-lg border border-border bg-card card-glow cyber-border flex flex-col group"
             >
               <div className="flex items-start gap-3 mb-3">
-                <project.icon className="w-6 h-6 text-primary shrink-0 mt-0.5" />
+                <project.icon className="w-6 h-6 text-primary shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="text-lg font-bold text-foreground">{project.title}</h3>
               </div>
               <p className="text-sm text-secondary-foreground mb-4 flex-1">{project.description}</p>

@@ -42,7 +42,7 @@ const SkillsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-lg border border-border bg-card card-glow"
+              className="p-6 rounded-lg border border-border bg-card card-glow cyber-border"
             >
               <h3 className="font-mono font-semibold text-primary text-sm mb-4 uppercase tracking-wider">
                 {cat.title}
