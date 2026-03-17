@@ -33,12 +33,19 @@ const AboutSection = () => {
               { icon: Target, title: "Offensive Mindset", desc: "Think like an attacker to defend like a professional." },
               { icon: BookOpen, title: "Continuous Learner", desc: "Constantly studying new attack vectors and exploitation techniques." },
               { icon: Briefcase, title: "Career Focus", desc: "Building toward a career in penetration testing and red team operations." },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="p-5 rounded-lg border border-border bg-card card-glow">
-                <Icon className="w-8 h-8 text-primary mb-3" />
+            ].map(({ icon: Icon, title, desc }, i) => (
+              <motion.div
+                key={title}
+                className="p-5 rounded-lg border border-border bg-card card-glow cyber-border group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + i * 0.15 }}
+              >
+                <Icon className="w-8 h-8 text-primary mb-3 transition-transform duration-300 group-hover:scale-110" />
                 <h3 className="font-mono font-semibold text-foreground mb-2">{title}</h3>
                 <p className="text-sm text-muted-foreground">{desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
