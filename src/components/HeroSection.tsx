@@ -91,12 +91,7 @@ const HeroSection = () => {
           </motion.div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold font-mono mb-4 tracking-tight">
-            <span
-              className="glitch-text text-foreground"
-              data-text="Abdelrahman Sayed"
-            >
-              Abdelrahman Sayed
-            </span>
+            <span className="text-foreground">Abdelrahman Sayed</span>
           </h1>
 
           <motion.p
