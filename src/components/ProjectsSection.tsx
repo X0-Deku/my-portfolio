@@ -51,7 +51,7 @@ const ProjectsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-6 rounded-lg border border-border bg-card card-glow flex flex-col"
+              className="p-6 rounded-lg border border-border bg-card card-glow cyber-border flex flex-col group"
             >
               <div className="flex items-start gap-3 mb-3">
                 <project.icon className="w-6 h-6 text-primary shrink-0 mt-0.5" />
